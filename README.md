@@ -1,0 +1,1 @@
+This repository is meant to contain exercises from The Odin Project, Web Development 101 section.
