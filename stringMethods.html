@@ -5,11 +5,9 @@
                 In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. <br>
                 We want you to fill in a conditional test inside the if( ... ) structure, to test each string and only print it in the list if it is a Christmas message.
         </p>
-/*First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
-You'll then need to write a conditional test of the form operand1 operator operand2. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?
-Hint: In this case it is probably more useful to test whether the method call isn't equal to a certain result.*/
 
             <script>
+                //Filtering messages
                 var list = document.querySelector('.output ul');
                 list.innerHTML = '';
                 var greetings = ['Happy Birthday!',
@@ -22,12 +20,64 @@ Hint: In this case it is probably more useful to test whether the method call is
                 var input = greetings[i];
                 // Your conditional test needs to go inside the parentheses
                 // in the line below, replacing what's currently there
-                if (greetings[i]) {
+                if (greetings[i].indexOf('Christmas')!==-1) {
                     var listItem = document.createElement('li');
                     listItem.textContent = input;
                     list.appendChild(listItem);
                 }
                 }
+
+                //Fixing capitalization
+
+        //In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
+
+        //Convert the whole of the string contained in the input variable to lower case and store it in a new variable.
+        //Grab the first letter of the string in this new variable and store it in another variable.
+        //Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
+        //Change the value of the result variable to equal to the final result, not the input.
+
+        var list = document.querySelector('.output ul');
+        list.innerHTML = '';
+        var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];            
+        
+        for (var i = 0; i < cities.length; i++) {
+        var input = cities[i];
+        // write your code just below here
+        var lowercase = i.toLowerCase();
+        var firstLetter = lower.slice(0,1);
+        var correctName = replace(firstLetter, firstLetter.toUpperCase());
+
+        var result = correctName;           
+        var listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);            
+        }
+
+        //Making new strings
+
+        //In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name.
+
+        var list = document.querySelector('.output ul');
+        list.innerHTML = '';
+        var stations = 
+        ['MAN675847583748sjt567654;Manchester Piccadilly',
+        'GNF576746573fhdg4737dh4;Greenfield',
+        'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+        'SYB4f65hf75f736463;Stalybridge',
+        'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+        for (var i = 0; i < stations.length; i++) {
+        var input = stations[i];
+        // write your code just below here
+        var stationCode = input.slice(0,3);
+        var semiFind= input.indexOf(';');
+        var readable = input.slice(semiFind + 1);
+        var result= stationCode+ ": "+readable;
+        var listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+        }
+
             </script>
         </body>
     </head>
