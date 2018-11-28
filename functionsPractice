@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <h3>Fundamentals 3 Practice: Functions</h3>
+    </head>
+    <body>
+        <script>
+            Let’s write some functions! Write these in the script tag of a skeleton html file. If you’ve forgotten how to set it up, review the instructions from fundamentals 1.
+
+            For now just write each function and test the output with console.log.
+
+            Write a function called add7 that takes one number and returns that number + 7.
+            Write a function called multiply that takes 2 numbers and returns their product.
+            Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+            Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d"
+            var number, number1, number2;
+            var string;
+
+            function add7(number){
+                return number = number + 7;
+                
+            }
+
+            function multiply(number1, number2){
+                return result= number1 * number2;
+            }
+
+            function capitalize(string){
+                var stringlower = string.toLowerCase();
+                var initialLetter = stringlower.slice(0,1);
+                var capitalLetter = stringlower.replace(initialLetter, initialLetter.toUpperCase());
+                var result = capitalLetter + stringlower;
+                return result;
+            }
+
+            function lastLetter(string){
+                var finalChar = string[string.length-1];
+                return finalChar;
+            }
+        </script>
+    </body>
+</html>
