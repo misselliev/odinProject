@@ -14,7 +14,42 @@
         const content = document.createElement('div');
         content.classList.add('content');
         content.textContent = 'This is the glorious text-content!';
+        container.appendChild(content);
+
+
         
-        container.appendChild(content);</script>
+        //<p> with red text that says Hey I'm red!
+        const content2 = document.createElement("p");
+        content2.style.color= "red";
+        content2.textContent="hey i'm red"
+
+
+
+        //an <h3> with blue text that says I'm a blue h3!
+        const content3 = document.createElement("h3");
+        content3.style.color ="blue";
+        content3.textContent="hey i'm a blue h3!";
+
+
+
+        //a div with black border and pink background color with the following elements inside it: a)another <h1> that says I'm a div! b)a <p> that says ME TOO!
+        const content4 = document.createElement("div");
+        content4.setAttribute("style","color:black; background: pink");
+        
+        var h1tag = document.createElement("h1");
+        h1tag.innerHTML = "I'm in a div!";
+        var ptag = document.createElement("p");
+        ptag.innerHTML = "Me too!";
+
+        container.appendChild(content);
+        container.appendChild(content2);
+        container.appendChild(content3);
+        content4.appendChild(h1tag);
+        content4.appendChild(ptag);
+        container.appendChild(content4);
+
+        
+        
+        </script>
 
 </body>
